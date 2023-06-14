@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="KutuphaneDBModelStoreContainer" CdmEntityContainer="KutuphaneDBEntities">
+    <EntitySetMapping Name="Kitaplar">
+      <EntityTypeMapping TypeName="KutuphaneDBModel.Kitaplar">
+        <MappingFragment StoreEntitySet="Kitaplar">
+          <ScalarProperty Name="kitapID" ColumnName="kitapID" />
+          <ScalarProperty Name="kitapAdi" ColumnName="kitapAdi" />
+          <ScalarProperty Name="kitapYazari" ColumnName="kitapYazari" />
+          <ScalarProperty Name="kitapTuru" ColumnName="kitapTuru" />
+          <ScalarProperty Name="yayinEvi" ColumnName="yayinEvi" />
+          <ScalarProperty Name="rafNumara" ColumnName="rafNumara" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="login">
+      <EntityTypeMapping TypeName="KutuphaneDBModel.login">
+        <MappingFragment StoreEntitySet="login">
+          <ScalarProperty Name="users_ID" ColumnName="users_ID" />
+          <ScalarProperty Name="users_name" ColumnName="users_name" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="uyeler">
+      <EntityTypeMapping TypeName="KutuphaneDBModel.uyeler">
+        <MappingFragment StoreEntitySet="uyeler">
+          <ScalarProperty Name="uyeID" ColumnName="uyeID" />
+          <ScalarProperty Name="uyeTC" ColumnName="uyeTC" />
+          <ScalarProperty Name="uyeADİ" ColumnName="uyeADİ" />
+          <ScalarProperty Name="uyeSOYADİ" ColumnName="uyeSOYADİ" />
+          <ScalarProperty Name="uyeTELNO" ColumnName="uyeTELNO" />
+          <ScalarProperty Name="uyeMAİL" ColumnName="uyeMAİL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

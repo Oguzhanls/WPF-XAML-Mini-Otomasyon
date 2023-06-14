@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KutuphaneDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Kitaplar">
+    <Key>
+      <PropertyRef Name="kitapID" />
+    </Key>
+    <Property Name="kitapID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="kitapAdi" Type="varchar" MaxLength="50" />
+    <Property Name="kitapYazari" Type="varchar" MaxLength="50" />
+    <Property Name="kitapTuru" Type="varchar" MaxLength="50" />
+    <Property Name="yayinEvi" Type="varchar" MaxLength="50" />
+    <Property Name="rafNumara" Type="int" />
+  </EntityType>
+  <EntityType Name="login">
+    <Key>
+      <PropertyRef Name="users_ID" />
+    </Key>
+    <Property Name="users_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="users_name" Type="varchar" MaxLength="50" />
+    <Property Name="password" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="uyeler">
+    <Key>
+      <PropertyRef Name="uyeID" />
+    </Key>
+    <Property Name="uyeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="uyeTC" Type="int" />
+    <Property Name="uyeADİ" Type="nvarchar" MaxLength="50" />
+    <Property Name="uyeSOYADİ" Type="nvarchar" MaxLength="50" />
+    <Property Name="uyeTELNO" Type="int" />
+    <Property Name="uyeMAİL" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="KutuphaneDBModelStoreContainer">
+    <EntitySet Name="Kitaplar" EntityType="Self.Kitaplar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="login" EntityType="Self.login" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="uyeler" EntityType="Self.uyeler" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
